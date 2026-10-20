@@ -78,60 +78,15 @@ td{font-size:13px}
 .status-pending{background:var(--accent-soft);color:var(--accent)}
 .status-done{background:var(--ok-soft);color:var(--ok)}
 
-.calendar-grid{border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:12px;background:var(--paper)}
-.cal-head,.cal-week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}
-.cal-head{background:var(--head)}
-.cal-head div{padding:8px;text-align:center;font-weight:600;font-size:12px;color:var(--muted)}
-.cal-week{border-top:1px solid var(--line);row-gap:3px}
-.cal-day{border-left:1px solid var(--line);padding:4px 8px;font-size:12px;font-weight:600;color:var(--ink)}
-.cal-day:first-child{border-left:0}
-.cal-day.other{background:var(--bg);color:var(--done)}
-.cal-day.today .cal-num{background:var(--accent);color:var(--paper);border-radius:99px;padding:1px 7px}
-.cal-bar{position:relative;z-index:1;min-width:0;margin:0 4px;padding:0 8px;height:22px;line-height:22px;font-size:12px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-left:3px solid;border-radius:4px}
-.cal-bar b{font-weight:700}
-.cal-bar.cont-l{margin-left:0;border-left-width:0;border-top-left-radius:0;border-bottom-left-radius:0}
-.cal-bar.cont-r{margin-right:0;border-top-right-radius:0;border-bottom-right-radius:0}
-.cal-bar .until{font-family:var(--mono);font-size:11px;opacity:.7;margin-left:6px}
-.cal-bar.c1{background:#e3f2fd;color:#0d47a1;border-left-color:#1976d2}
-.cal-bar.c2{background:#f3e5f5;color:#6a1b9a;border-left-color:#7b1fa2}
-.cal-bar.c3{background:#e0f2f1;color:#00695c;border-left-color:#00796b}
-.cal-bar.c4{background:#fff3e0;color:#bf360c;border-left-color:#e65100}
-.cal-bar.c5{background:#fce4ec;color:#ad1457;border-left-color:#c2185b}
-.cal-bar.c6{background:#f1f8e9;color:#33691e;border-left-color:#558b2f}
-.cal-bar.c7{background:#ede7f6;color:#4527a0;border-left-color:#512da8}
-.cal-bar.c8{background:#e0f7fa;color:#006064;border-left-color:#00838f}
-.cal-bar.c9{background:#fbe9e7;color:#bf360c;border-left-color:#d84315}
-.cal-bar.c10{background:#f9fbe7;color:#827717;border-left-color:#9e9d24}
-.cal-bar.c11{background:#e8eaf6;color:#283593;border-left-color:#3949ab}
-.cal-bar.c12{background:#fff8e1;color:#8d6e00;border-left-color:#f9a825}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-top:12px}
+.cal-header{background:var(--head);padding:8px;text-align:center;font-weight:600;font-size:12px;color:var(--muted)}
+.cal-cell{background:var(--paper);padding:8px;min-height:80px;position:relative;font-size:12px}
+.cal-cell.other{background:var(--bg);opacity:.5}
+.cal-date{font-weight:600;margin-bottom:4px}
+.cal-event{font-size:11px;padding:2px 4px;border-radius:3px;margin:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cal-event.ms{background:var(--ms-bg);color:var(--ms)}
+.cal-event.cm{background:var(--cm-bg);color:var(--cm)}
 
-.req-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-@media (max-width:640px){.req-grid{grid-template-columns:1fr}}
-.file-drop{display:flex;flex-wrap:wrap;gap:8px;align-items:center;border:1px dashed var(--line);border-radius:7px;padding:10px;background:var(--bg)}
-.file-drop input{font:inherit;font-size:13px;max-width:100%}
-.file-list{display:flex;flex-wrap:wrap;gap:6px}
-.file-chip{display:inline-flex;align-items:center;gap:4px;font-size:12px;padding:4px 8px;border-radius:6px;background:var(--accent-soft);color:var(--accent);border:0;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-decoration:none}
-.file-btn{cursor:pointer;font-weight:500}
-.chip-x{border:0;background:none;padding:0 2px;color:inherit;font-size:14px;line-height:1}
-.req-meta{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted)}
-.req-meta b{font-weight:600;color:var(--ink)}
-.req-meta .hot,.req-meta .hot b{color:var(--hot)}
-.req-block{display:flex;flex-direction:column;gap:2px}
-.issue-tag{display:inline-block;font-size:11px;font-weight:600;padding:1px 6px;border-radius:99px;background:var(--hot-soft);color:var(--hot);margin-left:4px}
-.drive-link{font-size:13px;color:var(--accent);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.req-label{font-size:11px;font-weight:600;color:var(--muted)}
-.req-text{font-size:13px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere}
-.dl-list{display:flex;flex-direction:column}
-.dl-row{display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:10px;align-items:start;padding:10px 4px;border-bottom:1px solid var(--line)}
-.dl-row:last-of-type{border-bottom:0}
-.dl-row.past{opacity:.5}
-.dl-badge{font-family:var(--mono);font-size:11px;font-weight:600;padding:2px 7px;border-radius:99px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
-.dl-badge.hot{background:var(--hot-soft);color:var(--hot)}
-.dl-date{font-family:var(--mono);font-size:12px;color:var(--muted);white-space:nowrap;padding-top:1px}
-.dl-title{font-weight:600;font-size:13px}
-.dl-item{font-size:13px;margin-top:2px}
-.dl-ch{font-size:11px;color:var(--muted);margin-top:2px}
-.dl-src{font-size:11px;color:var(--muted);padding-top:8px}
 .todo-item{display:flex;gap:8px;align-items:flex-start;padding:10px;border-bottom:1px solid var(--line)}
 .todo-item:last-child{border-bottom:0}
 .todo-check{width:20px;height:20px;border-radius:4px;border:2px solid var(--line);background:var(--paper);cursor:pointer;flex-shrink:0;display:grid;place-items:center}
@@ -208,7 +163,16 @@ td{font-size:13px}
           <div style="font-weight:600;min-width:120px;text-align:center" id="calTitle"></div>
           <button type="button" id="calNext" style="padding:4px 8px;font-size:12px">▶</button>
         </div>
-        <div style="font-size:12px;color:var(--muted)">주마다 [무신사] → [29CM] 순으로 정렬 · 막대에 마우스를 올리면 전체 기간 표시</div>
+        <div style="display:flex;gap:6px">
+          <div style="display:flex;align-items:center;gap:4px;font-size:12px">
+            <div style="width:12px;height:12px;border-radius:2px;background:var(--ms-bg)"></div>
+            <span>무신사</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;font-size:12px">
+            <div style="width:12px;height:12px;border-radius:2px;background:var(--cm-bg)"></div>
+            <span>29cm</span>
+          </div>
+        </div>
       </div>
       <div id="dashboardCal" class="calendar-grid"></div>
     </section>
@@ -232,36 +196,14 @@ td{font-size:13px}
           <span style="font-weight:600;font-size:13px;color:var(--muted)">요청사항 *</span>
           <textarea class="f" id="reqContent" placeholder="요청 내용을 자세히 적어주세요" required></textarea>
         </label>
-        <div class="req-grid">
-          <label style="display:flex;flex-direction:column;gap:4px">
-            <span style="font-weight:600;font-size:13px;color:var(--muted)">진행 시작일</span>
-            <input type="date" class="f" id="reqStart">
-          </label>
-          <label style="display:flex;flex-direction:column;gap:4px">
-            <span style="font-weight:600;font-size:13px;color:var(--muted)">진행 종료일</span>
-            <input type="date" class="f" id="reqEnd">
-          </label>
-          <label style="display:flex;flex-direction:column;gap:4px">
-            <span style="font-weight:600;font-size:13px;color:var(--muted)">회신 마감일</span>
-            <input type="date" class="f" id="reqDeadline">
-          </label>
-        </div>
         <label style="display:flex;flex-direction:column;gap:4px">
-          <span style="font-weight:600;font-size:13px;color:var(--muted)">이벤트 내용</span>
-          <textarea class="f" id="reqEvent" placeholder="예: 쿠폰 15% + 구매 금액대별 사은품, 신상 3종 단독 선발매, 리뷰 이벤트 등"></textarea>
+          <span style="font-weight:600;font-size:13px;color:var(--muted)">마감일</span>
+          <input type="date" class="f" id="reqDeadline">
         </label>
         <label style="display:flex;flex-direction:column;gap:4px">
-          <span style="font-weight:600;font-size:13px;color:var(--muted)">구글 드라이브 링크</span>
-          <input type="url" class="f" id="reqDrive" placeholder="https://drive.google.com/...">
+          <span style="font-weight:600;font-size:13px;color:var(--muted)">담당자 연락처</span>
+          <input type="text" class="f" id="reqContact" placeholder="예: 010-0000-0000">
         </label>
-        <div style="display:flex;flex-direction:column;gap:6px">
-          <span style="font-weight:600;font-size:13px;color:var(--muted)">첨부 파일</span>
-          <div class="file-drop" id="reqFileBox">
-            <input type="file" id="reqFiles" multiple accept=".pdf,.xlsx,.csv,.docx,.pptx,.zip,.png,.jpg,.jpeg,.gif,.webp">
-            <span class="sub" id="reqFileHint">엑셀(xlsx)·PDF·CSV·워드·PPT·ZIP·이미지 · 파일당 최대 14MB</span>
-          </div>
-          <div id="reqFileList" class="file-list"></div>
-        </div>
         <div class="row">
           <span class="msg" id="reqMsg"></span>
           <button type="button" class="primary" id="reqSubmit">요청 추가</button>
@@ -286,7 +228,7 @@ td{font-size:13px}
     </div>
 
     <section class="panel">
-      <h2>브랜드사 이슈 추가</h2>
+      <h2>캠페인 추가</h2>
       <form id="campaignForm" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
         <label style="display:flex;flex-direction:column;gap:4px">
           <span style="font-weight:600;font-size:13px;color:var(--muted)">캠페인명 *</span>
@@ -319,7 +261,7 @@ td{font-size:13px}
         </label>
         <div style="grid-column:1/-1;display:flex;gap:10px;justify-content:flex-end">
           <span class="msg" id="campMsg"></span>
-          <button type="button" class="primary" id="campSubmit">브랜드사 이슈 추가</button>
+          <button type="button" class="primary" id="campSubmit">캠페인 추가</button>
         </div>
       </form>
     </section>
@@ -363,11 +305,6 @@ td{font-size:13px}
 
     <section class="panel">
       <h2>캠페인 캘린더</h2>
-      <div style="display:flex;gap:8px;align-items:center">
-        <button type="button" id="campCalPrev" style="padding:4px 8px;font-size:12px">◀</button>
-        <div style="font-weight:600;min-width:120px;text-align:center" id="campCalTitle"></div>
-        <button type="button" id="campCalNext" style="padding:4px 8px;font-size:12px">▶</button>
-      </div>
       <div id="campaignCal" class="calendar-grid"></div>
     </section>
 
@@ -424,7 +361,7 @@ td{font-size:13px}
   };
   var currentPlatform = 'musinsa';
   var currentCampaignFilter = 'all';
-  var dashboardCalMonth = new Date(new Date().getFullYear(),new Date().getMonth(),1);
+  var dashboardCalMonth = new Date();
 
   function pad(n){return String(n).padStart(2,"0")}
   function ds(d){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())}
@@ -463,20 +400,18 @@ td{font-size:13px}
       e.target.setAttribute("aria-pressed",true);
       currentCampaignFilter = e.target.dataset.platform;
       renderCampaigns();
-      renderCampaignCal();
     });
   });
 
   // 대시보드 캘린더 이동
-  function shiftMonth(n){
-    dashboardCalMonth = new Date(dashboardCalMonth.getFullYear(),dashboardCalMonth.getMonth()+n,1);
+  document.getElementById("calPrev").addEventListener("click",function(){
+    dashboardCalMonth.setMonth(dashboardCalMonth.getMonth()-1);
     renderDashboardCal();
-    renderCampaignCal();
-  }
-  document.getElementById("calPrev").addEventListener("click",function(){shiftMonth(-1)});
-  document.getElementById("calNext").addEventListener("click",function(){shiftMonth(1)});
-  document.getElementById("campCalPrev").addEventListener("click",function(){shiftMonth(-1)});
-  document.getElementById("campCalNext").addEventListener("click",function(){shiftMonth(1)});
+  });
+  document.getElementById("calNext").addEventListener("click",function(){
+    dashboardCalMonth.setMonth(dashboardCalMonth.getMonth()+1);
+    renderDashboardCal();
+  });
 
   // 어드민 공지 파싱
   var parsedCampaigns = [];
@@ -591,138 +526,48 @@ td{font-size:13px}
     setTimeout(function(){document.getElementById("adminMsg").textContent=""}, 3000);
   });
 
-  // 요청 저장소: db(공유) · assets(첨부) · downloads(엑셀 등 복원 저장)
-  var reqDb = null, assetsApi = null, dlApi = null, pendingFiles = [];
-  var NATIVE = {pdf:"application/pdf",png:"image/png",jpg:"image/jpeg",jpeg:"image/jpeg",gif:"image/gif",webp:"image/webp"};
-  var WRAP = {xlsx:1,csv:1,docx:1,pptx:1,zip:1};
-  var MAX_NATIVE = 20*1024*1024, MAX_WRAP = 14*1024*1024;
+  // 요청 추가
+  document.getElementById("reqSubmit").addEventListener("click",function(){
+    var brand = document.getElementById("reqBrand").value.trim();
+    var content = document.getElementById("reqContent").value.trim();
+    if(!brand||!content){document.getElementById("reqMsg").textContent="필수항목을 입력해주세요";return}
+    var req = {
+      id:Date.now(),
+      platform:currentPlatform,
+      brand:brand,
+      content:content,
+      deadline:document.getElementById("reqDeadline").value,
+      contact:document.getElementById("reqContact").value.trim(),
+      status:"new",
+      createdAt:new Date().toISOString()
+    };
+    data.requests.push(req);
+    document.getElementById("requestForm").reset();
+    document.getElementById("reqMsg").textContent="요청이 추가되었습니다! 슬랙으로 알림을 보내는 중...";
 
-  function reqMsg(t,ok){var m=document.getElementById("reqMsg");m.textContent=t;m.className="msg"+(ok?" ok":"")}
-  function extOf(n){var p=String(n).split(".");return p.length>1?p.pop().toLowerCase():""}
-  function fmtSize(b){return b>=1048576?(b/1048576).toFixed(1)+"MB":Math.max(1,Math.round(b/1024))+"KB"}
-  function errText(e){
-    var c=e&&e.code;
-    if(c==="too_large")return "파일이 너무 커요";
-    if(c==="unsupported_type"||c==="unsupported_ext")return "지원하지 않는 파일 형식이에요";
-    if(c==="quota_or_state")return "보드 저장 공간이 가득 찼어요";
-    if(c==="permission_denied"||c==="not_granted")return "저장 권한이 없어요 (보드 편집/참여 권한 필요)";
-    if(c==="rate_limited")return "잠시 후 다시 시도해주세요";
-    return "저장하지 못했어요"+(c?" ("+c+")":"");
-  }
+    // Slack 알림 발송
+    try {
+      var slackMessage = "🎯 새로운 브랜드 요청\n\n" +
+        "브랜드: " + req.brand + "\n" +
+        "플랫폼: " + (req.platform === 'musinsa' ? '무신사' : '29cm') + "\n" +
+        "요청사항: " + req.content + "\n" +
+        "마감일: " + (req.deadline || '미정') + "\n" +
+        "담당자: " + (req.contact || '미정');
 
-  function renderPendingFiles(){
-    document.getElementById("reqFileList").innerHTML = pendingFiles.map(function(f,i){
-      return '<span class="file-chip">'+esc(f.name)+' · '+fmtSize(f.size)+
-        ' <button type="button" class="chip-x" data-pend-rm="'+i+'" aria-label="첨부 취소">×</button></span>';
-    }).join("");
-  }
-  document.getElementById("reqFiles").addEventListener("change",function(){
-    var bad=[];
-    Array.prototype.forEach.call(this.files,function(f){
-      var ext=extOf(f.name);
-      if(NATIVE[ext]&&f.size<=MAX_NATIVE)pendingFiles.push(f);
-      else if(WRAP[ext]&&f.size<=MAX_WRAP)pendingFiles.push(f);
-      else bad.push(f.name);
+      fetch('https://hooks.slack.com/services/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', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({text: slackMessage})
+      }).catch(function(e){console.log('Slack 요청 완료:', e)});
+
+      console.log('Slack 알림 발송 시도됨');
+    } catch(error){
+      console.error('Slack 알림 에러:', error);
     });
-    this.value="";
-    renderPendingFiles();
-    reqMsg(bad.length?"추가하지 못한 파일: "+bad.join(", ")+" (형식 또는 14MB 초과)":"");
+
+    renderRequests();
+    render();
   });
-  document.getElementById("reqFileList").addEventListener("click",function(e){
-    var b=e.target.closest("[data-pend-rm]");if(!b)return;
-    pendingFiles.splice(+b.dataset.pendRm,1);renderPendingFiles();
-  });
-
-  function toB64(file){
-    return new Promise(function(res,rej){
-      var r=new FileReader();
-      r.onload=function(){res(String(r.result).split(",")[1]||"")};
-      r.onerror=function(){rej({code:"read_failed"})};
-      r.readAsDataURL(file);
-    });
-  }
-  async function uploadOne(f){
-    var ext=extOf(f.name);
-    if(NATIVE[ext]){
-      var r=await assetsApi.upload(f,{type:NATIVE[ext]});
-      return {id:r.id,name:f.name,size:f.size,ext:ext,wrapped:false};
-    }
-    var b64=await toB64(f);
-    var blob=new Blob([JSON.stringify({name:f.name,b64:b64})],{type:"application/json"});
-    var w=await assetsApi.upload(blob,{type:"application/json"});
-    return {id:w.id,name:f.name,size:f.size,ext:ext,wrapped:true};
-  }
-
-  async function saveFile(fileObj){
-    if(!dlApi){reqMsg("이 화면에서는 파일을 내려받을 수 없어요");return}
-    try{
-      var res=await fetch("/_blob/"+fileObj.id);
-      if(!res.ok)throw {code:"missing"};
-      var j=await res.json();
-      var bin=atob(j.b64),bytes=new Uint8Array(bin.length);
-      for(var i=0;i<bin.length;i++)bytes[i]=bin.charCodeAt(i);
-      await dlApi.save({filename:fileObj.name,data:bytes});
-    }catch(e){
-      if(e&&e.code==="declined")return;
-      reqMsg(e&&e.code==="missing"?"파일을 찾을 수 없어요":"내려받지 못했어요"+(e&&e.code?" ("+e.code+")":""));
-    }
-  }
-
-  document.getElementById("reqSubmit").addEventListener("click",async function(){
-    var btn=this;
-    var brand=document.getElementById("reqBrand").value.trim();
-    var content=document.getElementById("reqContent").value.trim();
-    var start=document.getElementById("reqStart").value, end=document.getElementById("reqEnd").value;
-    if(!brand||!content){reqMsg("브랜드명과 요청사항은 꼭 입력해주세요");return}
-    if(start&&end&&end<start){reqMsg("진행 종료일이 시작일보다 빨라요");return}
-    var drive=document.getElementById("reqDrive").value.trim();
-    if(drive&&!/^https:\/\/(drive|docs)\.google\.com\//.test(drive)){reqMsg("구글 드라이브 링크(https://drive.google.com/… 또는 docs.google.com/…)를 넣어주세요");return}
-    if(pendingFiles.length&&!assetsApi){reqMsg("파일 첨부는 보드 편집 권한이 있는 사람만 할 수 있어요");return}
-    btn.disabled=true;
-    try{
-      var files=[];
-      for(var i=0;i<pendingFiles.length;i++){
-        reqMsg("파일 올리는 중… ("+(i+1)+"/"+pendingFiles.length+")",true);
-        files.push(await uploadOne(pendingFiles[i]));
-      }
-      var req={
-        platform:currentPlatform,brand:brand,content:content,
-        eventDetail:document.getElementById("reqEvent").value.trim(),
-        start:start,end:end,
-        deadline:document.getElementById("reqDeadline").value,
-        driveLink:drive,
-        status:"new",files:files,createdAt:new Date().toISOString()
-      };
-      if(reqDb){await reqDb.collection("requests").add(req)}
-      else{req.id="local-"+Date.now();data.requests.push(req);renderRequests();render()}
-      document.getElementById("requestForm").reset();
-      pendingFiles=[];renderPendingFiles();
-      reqMsg(reqDb?"요청을 추가했어요":"요청을 추가했어요 (로그인하지 않아 새로고침하면 사라져요)",true);
-    }catch(e){reqMsg(errText(e))}
-    finally{btn.disabled=false}
-  });
-
-  (async function connectStore(){
-    if(!window.claude||typeof claude.use!=="function")return;
-    var r=await Promise.all([claude.use("db"),claude.use("assets"),claude.use("downloads")]);
-    reqDb=r[0];assetsApi=r[1];dlApi=r[2];
-    if(!assetsApi){
-      document.getElementById("reqFiles").disabled=true;
-      document.getElementById("reqFileHint").textContent="파일 첨부는 보드 편집 권한이 있는 사람만 할 수 있어요";
-    }
-    if(!reqDb)return;
-    reqDb.collection("issues").onSnapshot(function(snap){
-      issueList=snap.docs.map(function(d){var o=Object.assign({},d.data());o.id=d.id;o.source="issue";o.colorClass=issueColor(d.id);return o})
-        .filter(function(o){return typeof o.name==="string"&&o.name&&DATE_RE.test(o.start||"")&&DATE_RE.test(o.end||"")&&o.start<=o.end&&(o.platform==="musinsa"||o.platform==="29cm"||o.platform==="both")})
-        .map(function(o){if(!DATE_RE.test(o.collectDeadline||""))o.collectDeadline="";if(typeof o.note!=="string")o.note="";return o});
-      rebuildCampaigns();
-    },function(e){var m=document.getElementById("campMsg");m.className="msg";m.textContent="브랜드사 이슈를 불러오지 못했어요 ("+e.code+")"});
-    reqDb.collection("requests").onSnapshot(function(snap){
-      data.requests=snap.docs.map(function(d){var o=Object.assign({},d.data());o.id=d.id;return o})
-        .sort(function(a,b){return String(a.createdAt||"")<String(b.createdAt||"")?-1:1});
-      renderRequests();render();
-    },function(e){reqMsg("요청 목록을 불러오지 못했어요 ("+e.code+")")});
-  })();
 
   // 캠페인 추가
   document.getElementById("campSubmit").addEventListener("click",function(){
@@ -731,8 +576,8 @@ td{font-size:13px}
     var start = document.getElementById("campStart").value;
     var end = document.getElementById("campEnd").value;
     if(!name||!platform||!start||!end){document.getElementById("campMsg").textContent="필수항목을 입력해주세요";return}
-    if(end<start){document.getElementById("campMsg").textContent="종료일이 시작일보다 빨라요";return}
-    var issue = {
+    var campaign = {
+      id:Date.now(),
       name:name,
       platform:platform,
       start:start,
@@ -741,30 +586,14 @@ td{font-size:13px}
       note:document.getElementById("campNote").value.trim(),
       createdAt:new Date().toISOString()
     };
-    var btn=this, msg=document.getElementById("campMsg");
-    if(!reqDb){
-      issue.id="local-"+Date.now();issue.source="issue";issue.colorClass=issueColor(issue.id);
-      issueList.push(issue);rebuildCampaigns();
-      document.getElementById("campaignForm").reset();
-      msg.className="msg";msg.textContent="추가했어요 (로그인하지 않아 새로고침하면 사라져요)";
-      return;
-    }
-    btn.disabled=true;
-    reqDb.collection("issues").add(issue).then(function(){
-      document.getElementById("campaignForm").reset();
-      msg.className="msg ok";msg.textContent="브랜드사 이슈를 추가했어요";
-    }).catch(function(e){
-      msg.className="msg";msg.textContent=errText(e);
-    }).then(function(){btn.disabled=false});
+    data.campaigns.push(campaign);
+    document.getElementById("campaignForm").reset();
+    document.getElementById("campMsg").textContent="";
+    renderCampaigns();
+    renderChecklist();
+    renderCampaignCal();
+    render();
   });
-
-  var issueList = [];
-  var DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
-  function issueColor(id){var h=0;for(var i=0;i<id.length;i++)h=(h*31+id.charCodeAt(i))>>>0;return 'c'+(1+h%12)}
-  function rebuildCampaigns(){
-    data.campaigns = baseCampaigns.concat(issueList);
-    renderCampaigns();renderCampaignCal();render();
-  }
 
   // 노트 저장
   document.getElementById("noteSubmit").addEventListener("click",function(){
@@ -781,213 +610,156 @@ td{font-size:13px}
     renderNotes();
   });
 
-  var armedDelete = null;
-  function periodText(r){
-    if(r.start&&r.end)return label(r.start)+' ~ '+label(r.end);
-    if(r.start)return label(r.start)+' ~';
-    if(r.end)return '~ '+label(r.end);
-    return '';
-  }
   function renderRequests(){
-    var filtered = data.requests.filter(function(r){return r.platform===currentPlatform||currentPlatform==="all"}).slice().reverse();
+    var filtered = data.requests.filter(function(r){return r.platform===currentPlatform||currentPlatform==="all"});
     var html = filtered.length?"":"<div class='empty'>요청이 없어요.</div>";
     html += filtered.map(function(r){
-      var st = ({"new":1,"reviewing":1,"approved":1,"completed":1})[r.status]?r.status:"new";
-      var badge = {"new":"신규","reviewing":"검토중","approved":"승인","completed":"완료"}[st];
-      var period = periodText(r);
-      var files = Array.isArray(r.files)?r.files:[];
-      var id = esc(r.id);
+      var badge = {"new":"신규","reviewing":"검토중","approved":"승인","completed":"완료"}[r.status]||"신규";
       return '<div class="card">'+
         '<div class="card-header">'+
-          '<div><div class="card-title">'+esc(r.brand)+'</div><div style="font-size:12px;color:var(--muted);margin-top:4px">등록 '+(r.createdAt?label(String(r.createdAt).split("T")[0]):'')+'</div></div>'+
-          '<span class="card-badge badge-'+st+'">'+badge+'</span>'+
+          '<div><div class="card-title">'+r.brand+'</div><div style="font-size:12px;color:var(--muted);margin-top:4px">'+label(r.createdAt.split("T")[0])+'</div></div>'+
+          '<span class="card-badge badge-'+r.status+'">'+badge+'</span>'+
         '</div>'+
-        ((period||r.deadline)?'<div class="req-meta">'+
-          (period?'<span><b>진행</b> '+period+'</span>':'')+
-          (r.deadline?'<span class="hot"><b>회신 마감</b> '+label(r.deadline)+'</span>':'')+
-        '</div>':'')+
-        '<div class="req-block"><div class="req-label">요청사항</div><div class="req-text">'+esc(r.content)+'</div></div>'+
-        (r.eventDetail?'<div class="req-block"><div class="req-label">이벤트 내용</div><div class="req-text">'+esc(r.eventDetail)+'</div></div>':'')+
-        (files.length?'<div class="req-block"><div class="req-label">첨부 파일</div><div class="file-list">'+files.map(function(f,i){
-          var nm=esc(f.name)+' · '+fmtSize(f.size||0);
-          return f.wrapped
-            ? '<button type="button" class="file-chip file-btn" data-file-req="'+id+'" data-file-i="'+i+'">⬇ '+nm+'</button>'
-            : '<a class="file-chip file-btn" href="/_blob/'+encodeURIComponent(f.id)+'" target="_blank" rel="noopener">'+nm+'</a>';
-        }).join("")+'</div></div>':'')+
-        (/^https:\/\/(drive|docs)\.google\.com\//.test(r.driveLink||"")?'<div class="req-block"><div class="req-label">구글 드라이브</div><a class="drive-link" href="'+esc(r.driveLink)+'" target="_blank" rel="noopener">'+esc(r.driveLink)+'</a></div>':'')+
-        '<div style="display:flex;gap:6px;flex-wrap:wrap">'+
-          '<button type="button" data-req-status="'+id+'" data-status="reviewing" style="padding:4px 10px;font-size:12px">검토중</button>'+
-          '<button type="button" data-req-status="'+id+'" data-status="approved" style="padding:4px 10px;font-size:12px">승인</button>'+
-          '<button type="button" data-req-status="'+id+'" data-status="completed" style="padding:4px 10px;font-size:12px">완료</button>'+
-          '<button type="button" data-req-delete="'+id+'" style="padding:4px 10px;font-size:12px;color:var(--hot)">'+(armedDelete===String(r.id)?'정말 삭제':'삭제')+'</button>'+
+        '<div style="font-size:13px;line-height:1.6">'+r.content+'</div>'+
+        (r.deadline?'<div style="font-size:12px;color:var(--hot)">마감: '+label(r.deadline)+'</div>':'')+
+        (r.contact?'<div style="font-size:12px;color:var(--muted)">담당자: '+r.contact+'</div>':'')+
+        '<div style="display:flex;gap:6px">'+
+          '<button type="button" data-req-status="'+r.id+'" data-status="reviewing" style="padding:4px 10px;font-size:12px">검토중</button>'+
+          '<button type="button" data-req-status="'+r.id+'" data-status="approved" style="padding:4px 10px;font-size:12px">승인</button>'+
+          '<button type="button" data-req-delete="'+r.id+'" style="padding:4px 10px;font-size:12px;color:var(--hot)">삭제</button>'+
         '</div>'+
       '</div>';
     }).join("");
-    document.getElementById("requestsList").innerHTML = html;
+    var container = document.getElementById("requestsList");
+    container.innerHTML = html;
+    container.querySelectorAll('[data-req-status]').forEach(function(b){
+      b.addEventListener("click",function(){
+        var id = +b.dataset.reqStatus;
+        var status = b.dataset.status;
+        var req = data.requests.find(function(r){return r.id===id});
+        if(req)req.status=status;
+        renderRequests();
+        render();
+      });
+    });
+    container.querySelectorAll('[data-req-delete]').forEach(function(b){
+      b.addEventListener("click",function(){
+        var id = +b.dataset.reqDelete;
+        data.requests = data.requests.filter(function(r){return r.id!==id});
+        renderRequests();
+        render();
+      });
+    });
   }
-
-  document.getElementById("requestsList").addEventListener("click",async function(e){
-    var fb=e.target.closest("[data-file-req]");
-    if(fb){
-      var fr=data.requests.find(function(r){return String(r.id)===fb.dataset.fileReq});
-      if(fr&&fr.files)saveFile(fr.files[+fb.dataset.fileI]);
-      return;
-    }
-    var sb=e.target.closest("[data-req-status]");
-    if(sb){
-      var sid=sb.dataset.reqStatus, status=sb.dataset.status;
-      var req=data.requests.find(function(r){return String(r.id)===sid});
-      if(!req)return;
-      if(reqDb&&sid.indexOf("local-")!==0){
-        try{await reqDb.collection("requests").doc(sid).update({status:status})}catch(err){reqMsg(errText(err))}
-      }else{req.status=status;renderRequests();render()}
-      return;
-    }
-    var db2=e.target.closest("[data-req-delete]");
-    if(db2){
-      var did=db2.dataset.reqDelete;
-      if(armedDelete!==did){armedDelete=did;renderRequests();return}
-      armedDelete=null;
-      var dr=data.requests.find(function(r){return String(r.id)===did});
-      if(reqDb&&did.indexOf("local-")!==0){
-        try{
-          await reqDb.collection("requests").doc(did).delete();
-          if(assetsApi&&dr&&dr.files)for(var k=0;k<dr.files.length;k++){try{await assetsApi.delete(dr.files[k].id)}catch(_){}}
-        }catch(err){reqMsg(errText(err));renderRequests()}
-      }else{data.requests=data.requests.filter(function(r){return String(r.id)!==did});renderRequests();render()}
-    }
-  });
 
   function renderCampaigns(){
     var filtered = currentCampaignFilter==="all"?data.campaigns:data.campaigns.filter(function(c){return c.platform===currentCampaignFilter||c.platform==="both"});
     var html = '';
     filtered.forEach(function(c){
-      var isIssue = c.source==="issue";
-      html += '<tr><td>'+chName(c)+' '+esc(c.name)+(isIssue?' <span class="issue-tag">브랜드사 이슈</span>':'')+'</td><td><span class="badge-'+(c.platform==="musinsa"?"ms":"cm")+'">'+
+      html += '<tr><td>'+c.name+'</td><td><span class="badge-'+(c.platform==="musinsa"?"ms":"cm")+'">'+
         (c.platform==="both"?"무신사·29cm":c.platform==="musinsa"?"무신사":"29cm")+'</span></td><td>'+label(c.start)+' ~ '+label(c.end)+
         '</td><td>'+(c.collectDeadline?label(c.collectDeadline):"-")+
-        '</td><td>'+esc(c.note||"")+'</td><td>'+(isIssue?'<button type="button" data-camp-delete="'+esc(c.id)+'" style="padding:4px 8px;font-size:12px;color:var(--hot)">'+(armedIssueDelete===String(c.id)?'정말 삭제':'삭제')+'</button>':'')+'</td></tr>';
+        '</td><td>'+c.note+'</td><td><button type="button" data-camp-delete="'+c.id+'" style="padding:4px 8px;font-size:12px;color:var(--hot)">삭제</button></td></tr>';
     });
     document.getElementById("campaignsList").innerHTML = html||'<tr><td colspan="6" class="empty">캠페인이 없어요.</td></tr>';
-  }
-  var armedIssueDelete = null;
-  document.getElementById("campaignsList").addEventListener("click",function(e){
-    var b=e.target.closest("[data-camp-delete]");if(!b)return;
-    var id=b.dataset.campDelete;
-    if(armedIssueDelete!==id){armedIssueDelete=id;renderCampaigns();return}
-    armedIssueDelete=null;
-    if(reqDb&&id.indexOf("local-")!==0){
-      reqDb.collection("issues").doc(id).delete().catch(function(err){
-        var m=document.getElementById("campMsg");m.className="msg";m.textContent=errText(err);renderCampaigns();
+    document.querySelectorAll('[data-camp-delete]').forEach(function(b){
+      b.addEventListener("click",function(){
+        var id = +b.dataset.campDelete;
+        data.campaigns = data.campaigns.filter(function(c){return c.id!==id});
+        renderCampaigns();
+        renderChecklist();
+        renderCampaignCal();
       });
-    }else{issueList=issueList.filter(function(c){return String(c.id)!==id});rebuildCampaigns()}
-  });
-
-  function esc(s){return String(s).replace(/[&<>"]/g,function(ch){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[ch]})}
-  function chName(c){return c.platform==="musinsa"?"[무신사]":c.platform==="both"?"[무신사·29CM]":"[29CM]"}
-
-  function buildMonthCal(y,m,camps){
-    var first = new Date(y,m,1), last = new Date(y,m+1,0);
-    var cur = new Date(y,m,1-first.getDay());
-    var today = todayStr();
-    var html = '<div class="cal-head">'+W.map(function(w){return '<div>'+w+'</div>'}).join("")+'</div>';
-    while(cur<=last){
-      var days = [];
-      for(var i=0;i<7;i++){days.push(ds(cur));cur.setDate(cur.getDate()+1)}
-      var wS = days[0], wE = days[6];
-      var inWeek = camps.filter(function(c){return c.start<=wE&&c.end>=wS}).sort(function(a,b){
-        if(a.platform!==b.platform)return a.platform==="musinsa"?-1:1;
-        if(a.start!==b.start)return a.start<b.start?-1:1;
-        return a.end>b.end?-1:a.end<b.end?1:0;
-      });
-      var lanes = [], bars = '';
-      inWeek.forEach(function(c){
-        var s = c.start<wS?0:days.indexOf(c.start);
-        var e = c.end>wE?6:days.indexOf(c.end);
-        var lane = 0;
-        while(lanes[lane]!==undefined&&lanes[lane]>=s)lane++;
-        lanes[lane] = e;
-        var contL = c.start<wS, contR = c.end>wE;
-        var full = chName(c)+' '+c.name+' ('+label(c.start)+'~'+label(c.end)+')';
-        bars += '<div class="cal-bar '+(c.colorClass||"c1")+(contL?' cont-l':'')+(contR?' cont-r':'')+
-          '" style="grid-column:'+(s+1)+' / span '+(e-s+1)+';grid-row:'+(lane+2)+'" title="'+esc(full)+'">'+
-          (contL?'← ':'')+'<b>'+chName(c)+'</b> '+esc(c.name)+
-          (!contR?'<span class="until">~'+label(c.end)+'</span>':'')+'</div>';
-      });
-      var rows = Math.max(lanes.length,2);
-      html += '<div class="cal-week" style="grid-template-rows:26px repeat('+rows+',22px) 8px">';
-      days.forEach(function(dStr,i){
-        var dt = parse(dStr);
-        html += '<div class="cal-day'+(dt.getMonth()!==m?' other':'')+(dStr===today?' today':'')+
-          '" style="grid-column:'+(i+1)+';grid-row:1 / -1"><span class="cal-num">'+dt.getDate()+'</span></div>';
-      });
-      html += bars+'</div>';
-    }
-    return html;
+    });
   }
 
   function renderCampaignCal(){
-    var d = new Date(dashboardCalMonth);
-    var camps = currentCampaignFilter==="all"?data.campaigns:data.campaigns.filter(function(c){return c.platform===currentCampaignFilter||c.platform==="both"});
-    document.getElementById("campCalTitle").textContent = d.getFullYear()+"년 "+(d.getMonth()+1)+"월";
-    document.getElementById("campaignCal").innerHTML = buildMonthCal(d.getFullYear(),d.getMonth(),camps);
+    var today = todayStr();
+    var d = parse(today);
+    var m = d.getMonth();
+    var firstDay = new Date(d.getFullYear(),m,1);
+    var lastDay = new Date(d.getFullYear(),m+1,0);
+    var startDate = new Date(firstDay);
+    startDate.setDate(startDate.getDate()-(firstDay.getDay()));
+
+    var html = '';
+    for(var i=0;i<7;i++)html += '<div class="cal-header">'+W[i]+'</div>';
+
+    var cur = new Date(startDate);
+    while(cur<=lastDay){
+      var dateStr = ds(cur);
+      var isOther = cur.getMonth()!==m;
+      var campOnDay = data.campaigns.filter(function(c){return c.start<=dateStr&&c.end>=dateStr});
+      html += '<div class="cal-cell'+(isOther?" other":"")+'"><div class="cal-date">'+cur.getDate()+'</div>';
+      campOnDay.forEach(function(c){
+        var cls = c.platform==="musinsa"?"ms":c.platform==="29cm"?"cm":"ms";
+        html += '<div class="cal-event '+cls+'">'+c.name+'</div>';
+      });
+      html += '</div>';
+      cur.setDate(cur.getDate()+1);
+    }
+    document.getElementById("campaignCal").innerHTML = html;
   }
 
   function renderDashboardCal(){
     var d = new Date(dashboardCalMonth);
-    document.getElementById("calTitle").textContent = d.getFullYear()+"년 "+(d.getMonth()+1)+"월";
-    document.getElementById("dashboardCal").innerHTML = buildMonthCal(d.getFullYear(),d.getMonth(),data.campaigns);
-  }
+    var m = d.getMonth();
+    var y = d.getFullYear();
+    var months = ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"];
+    document.getElementById("calTitle").textContent = y+"년 "+months[m];
 
-  // 출처: 각 캠페인 슬랙 채널 공지 (아래 ch 값)
-  var DL_UPDATED = '10/19 18:00';
-  var deadlines = [
-    ['2026-10-19','musinsa','11월 멤버스데이','소재 선정용 1차 취합 (12시) · 룩북/메인 프로모션 (EOD)','#정례_멤버스데이_md'],
-    ['2026-10-19','29cm','가을 에센셜 아이템','17% 컨틴전시 쿠폰 제외 상품 기재 (EOD)','#26년-10월-가을에센셜-세일즈'],
-    ['2026-10-20','musinsa','아우터 페스티벌','시그니처특가 5차 취합 (EOD)','#pjt-26-아우터페스티벌-md'],
-    ['2026-10-20','musinsa','겨울 무진장','KV 대표 상품 취합','#pjt-26-겨울-더블캠-어패럴'],
-    ['2026-10-20','29cm','이구위크','럭키박스 SNS 이벤트 참여 여부 체크 (EOD)','#26년-하반기-이구위크-세일즈'],
-    ['2026-10-21','musinsa','겨울 무진장','시그니처·카테고리 브랜드데이 최종 취합 / 시그니처특가 2차 (EOD)','#pjt-26-겨울-무진장-md'],
-    ['2026-10-22','29cm','이구위크','앙코르입점회(ITGG) 신청 마감 (18시)','#26년-하반기-이구위크-세일즈'],
-    ['2026-10-23','musinsa','아우터 페스티벌','시그니처특가 MFS 입고 등록 마감','#pjt-26-아우터페스티벌-md'],
-    ['2026-10-23','29cm','이구위크','파트너사 인풋·상세 혜택·구매 이벤트 기재 (EOD)','#26년-하반기-이구위크-세일즈'],
-    ['2026-10-26','musinsa','11월 멤버스데이','최종 취합 · 72시간 특가 별도 · 파이널 하루특가 · 프로모션 UID (EOD)','#정례_멤버스데이_md'],
-    ['2026-10-26','musinsa','겨울 무진장','일반세일 1차 · 기간/하루특가 1차(소재 선정용) · 시그니처특가 보류건 리더 컨펌','#pjt-26-겨울-무진장-md'],
-    ['2026-10-28','musinsa','11월 멤버스데이','쿠파셀 & 별도 쿠폰 마감','#정례_멤버스데이_md'],
-    ['2026-10-28','musinsa','겨울 무진장','내·외부 배너 소재 UID 1차','#pjt-26-겨울-더블캠-어패럴'],
-    ['2026-10-29','musinsa','11월 멤버스데이','72시간 특가 PO 마감 (EOD)','#정례_멤버스데이_md'],
-    ['2026-11-04','musinsa','겨울 무진장','내·외부 배너 소재 UID 2차','#pjt-26-겨울-더블캠-어패럴'],
-    ['2026-11-04','29cm','이구위크','브랜드 첫구매 쿠폰 생성 권장일','#26년-하반기-이구위크-세일즈'],
-    ['2026-11-09','musinsa','겨울 무진장','브랜드데이 기간 추가 할인 요청 마감','#pjt-26-겨울-더블캠-어패럴'],
-    ['2026-11-16','musinsa','겨울 무진장','기간·하루특가 최종 마감 (EOD)','#pjt-26-겨울-무진장-md'],
-    ['2026-11-19','musinsa','겨울 무진장','쿠파셀 마감(23:50) · 53시간 특가 · 오프닝 하루특가','#pjt-26-겨울-무진장-md'],
-    ['2026-11-23','musinsa','겨울 무진장','72시간 특가(11/25~27) 마감','#pjt-26-겨울-무진장-md'],
-    ['2026-11-26','musinsa','겨울 무진장','48시간 특가(11/28~12/1) 마감','#pjt-26-겨울-무진장-md'],
-    ['2026-11-30','musinsa','겨울 무진장','파이널 하루특가 마감','#pjt-26-겨울-무진장-md'],
-    ['2026-12-02','musinsa','겨울 무진장','일반세일 상시 모집 종료','#pjt-26-겨울-더블캠-어패럴']
-  ].map(function(r){return {date:r[0],platform:r[1],campaign:r[2],item:r[3],ch:r[4]}});
+    var firstDay = new Date(y,m,1);
+    var lastDay = new Date(y,m+1,0);
+    var startDate = new Date(firstDay);
+    startDate.setDate(startDate.getDate()-(firstDay.getDay()));
 
-  function dday(s){return Math.round((parse(s)-parse(todayStr()))/86400000)}
-  function dlRow(d){
-    var n = dday(d.date);
-    var badge = n===0?'D-DAY':(n>0?'D-'+n:'종료');
-    return '<div class="dl-row'+(n<0?' past':'')+'">'+
-      '<span class="dl-badge'+(n<=1&&n>=0?' hot':'')+'">'+badge+'</span>'+
-      '<span class="dl-date">'+label(d.date)+'('+W[parse(d.date).getDay()]+')</span>'+
-      '<div class="dl-body"><div class="dl-title"><b>'+(d.platform==="musinsa"?"[무신사]":"[29CM]")+'</b> '+esc(d.campaign)+'</div>'+
-      '<div class="dl-item">'+esc(d.item)+'</div><div class="dl-ch">'+esc(d.ch)+'</div></div></div>';
+    var html = '';
+    for(var i=0;i<7;i++)html += '<div class="cal-header">'+W[i]+'</div>';
+
+    var cur = new Date(startDate);
+    while(cur<=lastDay){
+      var dateStr = ds(cur);
+      var isOther = cur.getMonth()!==m;
+      var campOnDay = data.campaigns.filter(function(c){return c.start<=dateStr&&c.end>=dateStr});
+      html += '<div class="cal-cell'+(isOther?" other":"")+'"><div class="cal-date">'+cur.getDate()+'</div>';
+      campOnDay.forEach(function(c){
+        var platforms = c.platform==="both"?["musinsa","29cm"]:[c.platform];
+        platforms.forEach(function(p){
+          var cls = p==="musinsa"?"ms":"cm";
+          html += '<div class="cal-event '+cls+'" title="'+c.name+'">'+c.name.substring(0,6)+'</div>';
+        });
+      });
+      html += '</div>';
+      cur.setDate(cur.getDate()+1);
+    }
+    document.getElementById("dashboardCal").innerHTML = html;
   }
 
   function renderChecklist(){
-    var list = deadlines.slice().sort(function(a,b){return a.date<b.date?-1:a.date>b.date?1:0});
-    var upcoming = list.filter(function(d){return dday(d.date)>=0});
-    if(!upcoming.length){
-      document.getElementById("checklistContent").innerHTML = '<div class="empty">남은 취합 마감이 없어요.</div>';
+    var deadlines = [];
+    data.campaigns.forEach(function(c){
+      if(c.collectDeadline)deadlines.push({campaign:c,date:c.collectDeadline});
+    });
+    deadlines.sort(function(a,b){return a.date>b.date?1:-1});
+
+    var html = '';
+    if(!deadlines.length){
+      document.getElementById("checklistContent").innerHTML = '<div class="empty">취합 마감이 예정된 캠페인이 없어요.</div>';
       return;
     }
-    var html = '<div class="dl-src" style="margin-bottom:8px">슬랙 채널 공지 기준 · '+DL_UPDATED+' 업데이트</div><div class="dl-list">';
-    html += upcoming.map(dlRow).join("");
-    document.getElementById("checklistContent").innerHTML = html+'</div>';
+
+    deadlines.forEach(function(d){
+      var isUrgent = d.date===todayStr();
+      html += '<div class="todo-item">'+
+        '<div class="todo-check'+(isUrgent?' done':'')+'"></div>'+
+        '<div class="todo-content">'+
+          '<div class="todo-title">'+d.campaign.name+'</div>'+
+          '<div><span class="todo-date">'+label(d.date)+'</span><span class="todo-platform '+(d.campaign.platform==="musinsa"?"ms":"cm")+'">'+
+            (d.campaign.platform==="both"?"무신사·29cm":d.campaign.platform==="musinsa"?"무신사":"29cm")+'</span></div>'+
+        '</div>'+
+      '</div>';
+    });
+    document.getElementById("checklistContent").innerHTML = html;
   }
 
   function renderNotes(){
@@ -1004,32 +776,17 @@ td{font-size:13px}
   function render(){
     // 대시보드 업데이트
     var today = todayStr();
-    var weekStart = new Date();weekStart.setDate(weekStart.getDate()-(weekStart.getDay()-1));
-    var weekEnd = addDays(weekStart, 6);
+    var urgent = data.campaigns.filter(function(c){return c.collectDeadline&&c.collectDeadline<=today});
     var thisWeek = data.campaigns.filter(function(c){
-      return !(c.end<ds(weekStart)||c.start>weekEnd);
+      var d = parse(c.start);
+      var weekStart = new Date();weekStart.setDate(weekStart.getDate()-(weekStart.getDay()-1));
+      return c.start>=ds(weekStart)&&c.start<=addDays(weekStart,6);
     });
 
-    var urgentEl = document.getElementById("urgentDeadlines");
-    var urgent = deadlines.filter(function(d){var n=dday(d.date);return n>=0&&n<=7});
-    urgentEl.className = urgent.length?'dl-list':'empty';
-    urgentEl.innerHTML = !urgent.length?'7일 안에 돌아오는 취합 마감이 없어요.':
-      urgent.map(dlRow).join("")+'<div class="dl-src">슬랙 채널 공지 기준 · '+DL_UPDATED+' 업데이트 · 전체 일정은 취합 마감 탭</div>';
-    var weekByPlatform = {musinsa:[],'29cm':[]};
-    thisWeek.forEach(function(c){
-      if(c.platform==="both"){weekByPlatform.musinsa.push(c);weekByPlatform['29cm'].push(c)}
-      else if(weekByPlatform[c.platform])weekByPlatform[c.platform].push(c);
-    });
-    var weekHtml = '';
-    if(weekByPlatform.musinsa.length){
-      weekHtml += '<div style="font-weight:600;font-size:12px;color:var(--muted);margin-bottom:6px">무신사</div>';
-      weekHtml += weekByPlatform.musinsa.map(function(c){return '<div style="padding:8px;background:var(--ms-bg);border-radius:6px;margin-bottom:6px;color:var(--ms)">'+esc(c.name)+' ('+label(c.start)+'~'+label(c.end)+')</div>'}).join("");
-    }
-    if(weekByPlatform['29cm'].length){
-      weekHtml += '<div style="font-weight:600;font-size:12px;color:var(--muted);margin-bottom:6px;margin-top:12px">29cm</div>';
-      weekHtml += weekByPlatform['29cm'].map(function(c){return '<div style="padding:8px;background:var(--cm-bg);border-radius:6px;margin-bottom:6px;color:var(--cm)">'+esc(c.name)+' ('+label(c.start)+'~'+label(c.end)+')</div>'}).join("");
-    }
-    document.getElementById("weekCampaigns").innerHTML = !thisWeek.length?'<div class="empty">이번주 진행 캠페인이 없어요.</div>':weekHtml;
+    document.getElementById("urgentDeadlines").innerHTML = !urgent.length?'<div class="empty">마감일 예정 캠페인이 없어요.</div>':
+      urgent.map(function(c){return '<div style="padding:8px;background:var(--hot-soft);border-radius:6px">'+c.name+' · '+label(c.collectDeadline)+'</div>'}).join("");
+    document.getElementById("weekCampaigns").innerHTML = !thisWeek.length?'<div class="empty">이번주 진행 캠페인이 없어요.</div>':
+      thisWeek.map(function(c){return '<div style="padding:8px;background:var(--accent-soft);border-radius:6px">'+c.name+' ('+label(c.start)+'~'+label(c.end)+')</div>'}).join("");
 
     var newCount = data.requests.filter(function(r){return r.status==="new"}).length;
     var reviewCount = data.requests.filter(function(r){return r.status==="reviewing"}).length;
@@ -1041,8 +798,8 @@ td{font-size:13px}
     document.getElementById("recentRequests").innerHTML = !data.requests.length?'<div class="empty">최근 요청이 없어요.</div>':
       data.requests.slice(-3).reverse().map(function(r){
         return '<div style="padding:10px;background:var(--bg);border-radius:6px;border-left:3px solid var(--accent)">'+
-          '<div style="font-weight:600">'+esc(r.brand)+(periodText(r)?' <span style="font-weight:400;font-size:12px;color:var(--muted)">· '+periodText(r)+'</span>':'')+'</div>'+
-          '<div style="font-size:12px;color:var(--muted);margin-top:2px">등록 '+label(String(r.createdAt||"").split("T")[0]||todayStr())+'</div>'+
+          '<div style="font-weight:600">'+r.brand+'</div>'+
+          '<div style="font-size:12px;color:var(--muted);margin-top:2px">'+label(r.createdAt.split("T")[0])+'</div>'+
         '</div>';
       }).join("");
 
@@ -1051,68 +808,28 @@ td{font-size:13px}
 
   function addDays(d,n){var x=new Date(d);x.setDate(x.getDate()+n);return ds(x)}
 
-  // 무신사 전사 캠페인
-  // 출처: 🗓️[무신사커머스마케팅] 26_Store plan > [무신사커머스마케팅] 캠페인 스케줄 (2026) (뷰티 제외)
-  var msRaw = [
-    ['애프터 빅세일','2026-09-28','2026-10-08','빅캠페인','c3'],
-    ['멤버스데이','2026-10-01','2026-10-05','멤버스/브랜드위크','c10'],
-    ['온&오프 페스티벌','2026-10-06','2026-10-18','어패럴 오프라인/이벤트','c1'],
-    ['킥스 페스티벌','2026-10-06','2026-10-15','킥스','c8'],
-    ['SPA 브랜드위크','2026-10-09','2026-10-18','멤버스/브랜드위크','c2'],
-    ['아우터 페스티벌','2026-10-19','2026-10-28','어패럴 연합 캠페인','c6'],
-    ['멤버스데이 (배민 제휴)','2026-11-01','2026-11-03','그 외 전사캠페인','c10'],
-    ['SPA 브랜드위크','2026-11-02','2026-11-08','멤버스/브랜드위크','c2'],
-    ['패션위크 (킥스포함)','2026-11-02','2026-11-12','어패럴 연합 캠페인','c11'],
-    ['플러스오더 + 스포츠 브랜드위크','2026-11-09','2026-11-15','멤버스/브랜드위크','c7'],
-    ['겨울 무진장 티징','2026-11-20','2026-11-21','빅캠페인','c4'],
-    ['겨울 무진장','2026-11-22','2026-12-02','빅캠페인 · 상/하의/아우터·잡화·킥스·스포츠 동시 진행','c4'],
-    ['무진장 결산보고서','2026-12-03','2026-12-10','빅캠페인','c9'],
-    ['클래식 슈즈위크','2026-12-03','2026-12-09','킥스','c8'],
-    ['연말 빅세일','2026-12-07','2026-12-16','그 외 전사캠페인','c5'],
-    ['스포츠 브랜드위크','2026-12-07','2026-12-13','멤버스/브랜드위크','c7'],
-    ['SPA 브랜드위크','2026-12-14','2026-12-20','멤버스/브랜드위크','c2'],
-    ['방한 킥스위크','2026-12-21','2026-12-30','킥스','c12']
+  // Databricks 무신사 전사 캠페인 추가 (브랜드 단독 제외)
+  var munsinsaCampaigns = [
+    {id:'promo-17578',name:'온&오프 페스티벌',platform:'musinsa',start:'2026-10-06',end:'2026-10-19',collectDeadline:'',note:'10/6 11:00 ~ 10/20 00:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18265',name:'10월 2주차 SPA 브랜드위크',platform:'musinsa',start:'2026-10-09',end:'2026-10-19',collectDeadline:'',note:'10/9 11:00 ~ 10/19 11:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18386',name:'[글로벌] 26년 10월 브랜드위크 (뷰티)',platform:'musinsa',start:'2026-10-12',end:'2026-10-22',collectDeadline:'',note:'10/12 11:00 ~ 10/22 11:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18064',name:'무신사 뷰티 페스타',platform:'musinsa',start:'2026-10-12',end:'2026-10-21',collectDeadline:'',note:'10/12 11:00 ~ 10/22 11:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18550',name:'10월 3주차 브랜드위크',platform:'musinsa',start:'2026-10-19',end:'2026-10-26',collectDeadline:'',note:'10/19 11:00 ~ 10/26 11:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18078',name:'아우터 페스티벌',platform:'musinsa',start:'2026-10-19',end:'2026-10-29',collectDeadline:'',note:'10/19 11:00 ~ 10/29 11:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18149',name:'글로벌 아우터 페스티벌',platform:'musinsa',start:'2026-10-19',end:'2026-10-29',collectDeadline:'',note:'10/19 11:00 ~ 10/29 11:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18483',name:'무탠다드 FW 26 슈퍼세일',platform:'musinsa',start:'2026-10-21',end:'2026-11-02',collectDeadline:'',note:'10/21 17:00 ~ 11/2 00:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18551',name:'10월 4주차 브랜드위크',platform:'musinsa',start:'2026-10-26',end:'2026-11-01',collectDeadline:'',note:'10/26 11:00 ~ 11/1 00:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18552',name:'11월 멤버스데이 브랜드위크',platform:'musinsa',start:'2026-11-01',end:'2026-11-04',collectDeadline:'',note:'11/1 00:00 ~ 11/4 00:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18273',name:'무신사 패션 페스타',platform:'musinsa',start:'2026-11-02',end:'2026-11-12',collectDeadline:'',note:'11/2 11:00 ~ 11/12 11:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18344',name:'아우터 트렌드 미리보기',platform:'musinsa',start:'2026-11-02',end:'2026-11-20',collectDeadline:'',note:'11/2 11:00 ~ 11/20 11:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18553',name:'11월 SPA 브랜드위크',platform:'musinsa',start:'2026-11-04',end:'2026-11-09',collectDeadline:'',note:'11/4 00:00 ~ 11/9 11:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18574',name:'11월 2주차 브랜드위크',platform:'musinsa',start:'2026-11-09',end:'2026-11-16',collectDeadline:'',note:'11/9 11:00 ~ 11/16 11:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18596',name:'[글로벌] FW26 몬스터세일_티징',platform:'musinsa',start:'2026-11-20',end:'2026-11-22',collectDeadline:'',note:'11/20 19:00 ~ 11/22 19:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18562',name:'[글로벌] FW26 몬스터세일',platform:'musinsa',start:'2026-11-22',end:'2026-12-03',collectDeadline:'',note:'11/22 19:00 ~ 12/3 00:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18464',name:'무신사 무진장 26 겨울 블프 아우터',platform:'musinsa',start:'2026-11-22',end:'2026-12-03',collectDeadline:'',note:'11/22 19:00 ~ 12/3 00:00',createdAt:new Date().toISOString(),source:'admin'},
+    {id:'promo-18429',name:'2026 연말 결산 빅세일',platform:'musinsa',start:'2026-12-07',end:'2026-12-17',collectDeadline:'',note:'12/7 11:00 ~ 12/17 11:00',createdAt:new Date().toISOString(),source:'admin'}
   ];
-  var munsinsaCampaigns = msRaw.map(function(r,i){
-    return {id:'ms-'+(i+1),name:r[0],platform:'musinsa',start:r[1],end:r[2],collectDeadline:'',note:r[3],colorClass:r[4],createdAt:new Date().toISOString(),source:'sheet'};
-  });
-
-  // 29CM 전사 기획전 (10월~12월)
-  // 출처: [29CM] 26' 캠페인 캘린더 > [온사이트] 4Q 기획전 한판정리 (전사 + 여성패션/잡화)
-  var cm29Raw = [
-    ['2시에 9경와','2026-10-06','2026-10-06','전사','c11'],
-    ['2시에 9경와','2026-10-13','2026-10-13','전사','c11'],
-    ['2시에 9경와','2026-10-20','2026-10-20','전사','c11'],
-    ['이구데이 티징','2026-10-27','2026-10-28','전사','c5'],
-    ['이구데이 본편','2026-10-29','2026-10-29','전사','c5'],
-    ['2시에 9경와','2026-11-03','2026-11-03','전사','c11'],
-    ['이구위크 티징','2026-11-06','2026-11-09','전사','c9'],
-    ['이구위크 본편','2026-11-09','2026-11-19','전사','c9'],
-    ['2시에 9경와','2026-11-24','2026-11-24','전사','c11'],
-    ['이구데이 티징','2026-11-27','2026-11-28','전사','c5'],
-    ['이구데이 본편','2026-11-29','2026-11-29','전사','c5'],
-    ['2시에 9경와','2026-12-01','2026-12-01','전사','c11'],
-    ['2시에 9경와','2026-12-08','2026-12-08','전사','c11'],
-    ['29 홀리데이','2026-12-14','2026-12-28','전사 (홈 주관)','c12'],
-    ['2시에 9경와','2026-12-15','2026-12-15','전사','c11'],
-    ['2시에 9경와','2026-12-22','2026-12-22','전사','c11'],
-    ['이구데이 티징','2026-12-27','2026-12-28','전사','c5'],
-    ['이구데이 본편 (연말 결산)','2026-12-29','2026-12-31','전사','c5'],
-    ['간절기룩/아우터메인','2026-10-01','2026-10-15','여성패션/잡화','c1'],
-    ['홈웨어 (홈웨어+언더웨어)','2026-10-12','2026-10-19','여성패션/잡화','c2'],
-    ['가을 에센셜 아이템(+겨울발매)','2026-10-19','2026-10-29','여성패션/잡화','c3'],
-    ['얼리윈터 (헤비아우터 메인)','2026-10-30','2026-11-06','여성패션/잡화','c4'],
-    ['겨울 준비 (패션메인)','2026-11-20','2026-11-29','여성패션/잡화','c6'],
-    ['29익스클루시브','2026-11-30','2026-12-08','여성패션/잡화','c7'],
-    ['방한아이템','2026-12-07','2026-12-16','여성패션/잡화','c8'],
-    ['FW 클리어런스','2026-12-16','2026-12-28','여성패션/잡화','c10']
-  ];
-  var cm29Campaigns = cm29Raw.map(function(r,i){
-    return {id:'29cm-'+(i+1),name:r[0],platform:'29cm',start:r[1],end:r[2],collectDeadline:'',note:r[3],colorClass:r[4],createdAt:new Date().toISOString(),source:'sheet'};
-  });
-
-  var baseCampaigns = munsinsaCampaigns.concat(cm29Campaigns);
-  data.campaigns = baseCampaigns.concat(issueList);
+  data.campaigns = munsinsaCampaigns;
 
   renderRequests();
   renderCampaigns();
